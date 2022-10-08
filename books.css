@@ -1,0 +1,355 @@
+.subheader {
+    background: url('images/Untitled design.svg');
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: -80px;
+}
+
+.subheader .overlay {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #333;
+    background-image: linear-gradient( 135deg, #00000069 10%, #093a106b 100%);
+}
+
+.pagetitle {
+    margin-top: 112px;
+    font-family: 'Montserrat-SemiBold', cursive;
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+
+h3,
+p {
+    font-family: Montserrat-Regular;
+    margin-bottom: 20px;
+}
+
+button {
+    border: 2px solid #23D07E;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #fff;
+    background: transparent;
+    margin-bottom: -12px;
+    box-shadow: 0 3px 20px 0 #0000003b;
+}
+
+button:hover {
+    background: #23D07E;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url('fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url('fonts/montserrat/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url('fonts/montserrat/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url('fonts/montserrat/Montserrat-Regular.ttf');
+}
+
+fieldset.select-account {
+    position: relative;
+    width: 200px;
+    border: 0;
+}
+
+fieldset.select-account:before {
+    content: "›";
+    position: absolute;
+    z-index: 3;
+    color: #23d07e;
+    right: 10px;
+    top: 0px;
+    font-size: 30px;
+    transform: rotate(90deg);
+    pointer-events: none;
+    transition: all 50ms linear;
+}
+
+fieldset.select-account.active:before {
+    color: #fff;
+}
+
+fieldset.select-account>legend {
+    display: none;
+}
+
+button.choose-account {
+    margin-top: 6px;
+    color: black;
+    position: relative;
+    line-height: 35px;
+    padding: 0 0.6rem;
+    width: 100%;
+    background: #fff;
+    outline: 0;
+    border: 1px solid #23d07e;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+button.choose-account:focus {
+    background: #23d07e;
+    color: #fff;
+}
+
+.account-types {
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    top: 50px;
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 150ms ease;
+    border: 1px solid transparent;
+    z-index: 1;
+    background: #fff;
+}
+
+.select-account.active .account-types {
+    border: 1px solid #ddd;
+}
+
+.account-types label:focus {
+    background: #23d07e
+}
+
+.account-types input:checked~label {
+    background: #ccc;
+}
+
+.select-account.active .account-types {
+    max-height: 100vh;
+}
+
+.account-types label {
+    display: block;
+    width: 100%;
+    line-height: 35px;
+    height: 35px;
+    padding: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.account-types label:hover {
+    background: #ddd;
+}
+
+.account-types input:focus~label {
+    background: #ddd;
+}
+
+.select-account .account-types input {
+    display: none;
+}
+
+.select-account.active .account-types input {
+    display: block;
+    position: absolute;
+    opacity: 0;
+}
+
+.select-account.active .choose-account {
+    background: #23d07e;
+    color: #fff;
+}
+
+.marginl50 {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.filtercontainer {
+    margin-right: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contain {
+    width: 180px !important;
+}
+
+.categorie {
+    float: right;
+}
+
+
+/***categorie***/
+
+fieldset.select-account-categorie {
+    position: relative;
+    width: 200px;
+    border: 0;
+}
+
+fieldset.select-account-categorie:before {
+    content: "›";
+    position: absolute;
+    z-index: 3;
+    color: #23d07e;
+    right: 10px;
+    top: 0px;
+    font-size: 30px;
+    transform: rotate(90deg);
+    pointer-events: none;
+    transition: all 50ms linear;
+}
+
+fieldset.select-account-categorie.active:before {
+    color: #fff;
+}
+
+fieldset.select-account-categorie>legend {
+    display: none;
+}
+
+button.choose-account-categorie {
+    margin-top: 6px;
+    color: black;
+    position: relative;
+    line-height: 35px;
+    padding: 0 0.6rem;
+    width: 100%;
+    background: #fff;
+    outline: 0;
+    border: 1px solid #23d07e;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+button.choose-account-categorie:focus {
+    background: #23d07e;
+    color: #fff;
+}
+
+.account-types-categorie {
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    top: 50px;
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 150ms ease;
+    border: 1px solid transparent;
+    z-index: 1;
+    background: #fff;
+}
+
+.select-account-categorie.active .account-types-categorie {
+    border: 1px solid #ddd;
+}
+
+.account-types-categorie label:focus {
+    background: #23d07e
+}
+
+.account-types-categorie input:checked~label {
+    background: #ccc;
+}
+
+.select-account-categorie.active .account-types-categorie {
+    max-height: 100vh;
+}
+
+.account-types-categorie label {
+    display: block;
+    width: 100%;
+    line-height: 35px;
+    height: 35px;
+    padding: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.account-types-categorie label:hover {
+    background: #ddd;
+}
+
+.account-types-categorie input:focus~label {
+    background: #ddd;
+}
+
+.select-account-categorie .account-types-categorie input {
+    display: none;
+}
+
+.select-account-categorie.active .account-types-categorie input {
+    display: block;
+    position: absolute;
+    opacity: 0;
+}
+
+.select-account-categorie.active .choose-account-categorie {
+    background: #23d07e;
+    color: #fff;
+}
+
+.marginl50 {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.filtercontainer {
+    margin-right: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contain {
+    width: 180px !important;
+}
+
+.categorie {
+    float: right;
+}
